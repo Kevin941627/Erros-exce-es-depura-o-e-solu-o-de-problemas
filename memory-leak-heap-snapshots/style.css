@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 32px; background: #101827; color: #f3f4f6;
+  font: 16px/1.5 system-ui, sans-serif;
+}
+main { max-width: 900px; margin: auto; }
+h1 { color: #93c5fd; }
+.panel {
+  background: #1f2937; border: 1px solid #374151; border-radius: 12px;
+  padding: 20px; margin: 18px 0;
+}
+button {
+  margin: 6px 8px 6px 0; padding: 10px 14px; border: 0;
+  border-radius: 8px; cursor: pointer; background: #2563eb; color: white;
+}
+button:hover { background: #1d4ed8; }
+output { display: block; margin-top: 12px; color: #a7f3d0; }
+.leak-item, .fixed-item {
+  display: inline-block; margin: 4px; padding: 8px;
+  background: #374151; border-radius: 6px;
+}

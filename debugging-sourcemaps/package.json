@@ -1,0 +1,14 @@
+{
+  "name": "debugging-typescript-sourcemaps",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "debug": "npm run build && node --inspect-brk --enable-source-maps dist/main.js",
+    "start": "node --enable-source-maps dist/main.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "@types/node": "^22.0.0"
+  }
+}

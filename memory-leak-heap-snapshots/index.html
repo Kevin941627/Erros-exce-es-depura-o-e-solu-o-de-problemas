@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratório: Memory Leak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Laboratório de Memory Leak</h1>
+    <p>Abra o DevTools (F12) → Memory. Tire snapshots antes e depois de cada cenário.</p>
+
+    <section class="panel">
+      <h2>1. Cenário vulnerável</h2>
+      <p>Cria closures com arrays grandes, timers e listeners que não são removidos.</p>
+      <button id="startLeak">Iniciar vazamento (10 ciclos)</button>
+      <button id="showLeak">Mostrar elementos criados</button>
+      <output id="leakStatus">Nenhum ciclo executado.</output>
+    </section>
+
+    <section class="panel">
+      <h2>2. Cenário corrigido</h2>
+      <p>Remove listeners e timers e libera as referências aos arrays.</p>
+      <button id="runFixed">Executar cenário corrigido (10 ciclos)</button>
+      <button id="cleanupFixed">Limpar cenário corrigido</button>
+      <output id="fixedStatus">Nenhum ciclo executado.</output>
+    </section>
+
+    <section class="panel">
+      <h2>3. Elementos de teste</h2>
+      <div id="leakMount"></div>
+      <div id="fixedMount"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Console</h2>
+      <p>Abra a aba Console para observar contadores. Não use console.log(array), pois o próprio Console pode manter referências aos objetos.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
